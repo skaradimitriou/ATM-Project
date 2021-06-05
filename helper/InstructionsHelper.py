@@ -1,5 +1,7 @@
 class InstructionsHelper:
 
+    # This is the Helper Class. This is the class that contains every console
+    # init message for the user and helps him navigate
 
     def printWelcomeMessage(self):
         print()
@@ -11,3 +13,6 @@ class InstructionsHelper:
             print('2. Deposit')
             print('3. Withdrawal')
             print('4. Exit')
+
+    def printExitMessage(self):
+       print('You have been logged out successfully')
