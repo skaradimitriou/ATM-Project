@@ -9,10 +9,7 @@ class InstructionsHelper:
         print('How can we help you with today?')
 
     def printInstructions(self):
-            print('1. Check Balance')
-            print('2. Deposit')
-            print('3. Withdrawal')
-            print('4. Exit')
+            print('1. Check Balance | 2. Deposit | 3. Withdrawal | 4. Pay a bill | 5. Exit')
 
     def printExitMessage(self):
        print('You have been logged out successfully')

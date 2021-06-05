@@ -19,7 +19,7 @@ class Deposit:
             amount += newAmount
             self.userBalance = amount
         except:
-            print('Your number should be divided using a dot(.) instead of comma (e.g 100.50€)')
+            print('Your number should be divided using a dot(.) instead of comma (e.g 100.50)')
 
     def updateBalance(self):
         print('Your new balance after the Deposit is {0:,.2f}€'.format(self.userBalance))

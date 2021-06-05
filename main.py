@@ -1,4 +1,5 @@
 from balance.Balance import Balance
+from billing.BillPayment import BillPayment
 from deposit.Deposit import Deposit
 from helper.InstructionsHelper import InstructionsHelper
 from withdrawal.Withdrawal import Withdrawal
@@ -21,8 +22,8 @@ while True:
     helper.printInstructions()
     userChoice = int(input('Give your option: '))
 
-    if userChoice == 4:
-        # User selected 4 -> So the program will stop looping through actions and it will stop.
+    if userChoice == 5:
+        # User selected 5 -> So the program will stop looping through actions and it will stop.
         helper.printExitMessage()
         break
     elif userChoice == 1:
@@ -41,3 +42,7 @@ while True:
         withdrawal = Withdrawal()
         withdrawal.getAmount(userBalance)
         userBalance = withdrawal.updateBalance()
+    elif userChoice == 4:
+        billing = BillPayment()
+        billing.payTheBill(userBalance)
+        userBalance = billing.updateBalance()
