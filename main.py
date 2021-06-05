@@ -43,6 +43,7 @@ while True:
         withdrawal.getAmount(userBalance)
         userBalance = withdrawal.updateBalance()
     elif userChoice == 4:
+        # User selected 4 (Bill Payment) -> The program will call the Bill Payment class
         billing = BillPayment()
         billing.payTheBill(userBalance)
         userBalance = billing.updateBalance()
