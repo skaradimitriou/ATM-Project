@@ -1,35 +1,31 @@
-# trying to implement an ATM Project
 from balance.Balance import Balance
 from deposit.Deposit import Deposit
+from helper.InstructionsHelper import InstructionsHelper
 from withdrawal.Withdrawal import Withdrawal
 
-userBalance = 5000
+userBalance = 5000.0
 
-def printInstructions():
-    print('--- Welcome to the ATM Project --')
-    print()
-    print('How can we help you with today?')
-    print('1. Check Balance')
-    print('2. Deposit')
-    print('3. Withdrawal')
+helper = InstructionsHelper()
+helper.printWelcomeMessage()
 
+def printExitMessage():
+    print('You have been logged out successfully')
 
-printInstructions()
-userChoice = int(input('Give your option: '))
+while True:
+    helper.printInstructions()
+    userChoice = int(input('Give your option: '))
 
-if userChoice == 1:
-    balance = Balance()
-    balance.printBalanceInfo(userBalance)
-elif userChoice == 2:
-    deposit = Deposit()
-    deposit.addAmount(userBalance)
-    userBalance = deposit.updateBalance()
-elif userChoice == 3:
-    withdrawal = Withdrawal()
-    withdrawal.getAmount(userBalance)
-    userBalance = withdrawal.updateBalance()
-else:
-    print('You entered an error input choice.')
-    # userInput = int(input('Can we help you with something else?'))
-    # printInstructions()
-    # userChoice = int(input('Give your option: '))
+    if userChoice == 4:
+        printExitMessage()
+        break
+    elif userChoice == 1:
+        balance = Balance()
+        balance.printBalanceInfo(userBalance)
+    elif userChoice == 2:
+        deposit = Deposit()
+        deposit.addAmount(userBalance)
+        userBalance = deposit.updateBalance()
+    elif userChoice == 3:
+        withdrawal = Withdrawal()
+        withdrawal.getAmount(userBalance)
+        userBalance = withdrawal.updateBalance()

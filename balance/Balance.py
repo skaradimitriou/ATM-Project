@@ -6,4 +6,4 @@ class Balance:
         print('You chose Check Balance')
 
     def printBalanceInfo(self, balance):
-        print('Your account balance is: {0}€.'.format(balance))
+        print('Your account balance is: {0:,.2f}€.'.format(balance))
